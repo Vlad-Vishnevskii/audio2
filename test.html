@@ -1,0 +1,1294 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300..600;1,300..600&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <title>Myryad</title>
+    <style>
+        * {
+        margin: 0;
+        padding: 0;
+        }
+        body {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  background-color: #FBFCFD;
+  color: #141E2F;
+  transition: all .3s linear;
+             }
+        p, details {
+        font-weight: 300;
+        }
+        summary {
+        font-weight: 400;
+        }
+        b, h1, h2, h3 {
+        font-weight: 600;
+           }          
+        header {
+            width: 100%;
+            min-height: 3vh;
+            background-color: #141E2F;
+        }        
+        main {
+            width: 100%;
+        }        
+        nav {
+            color: #FBFCFD;
+        }        
+        iframe {
+            display: block;
+            margin: 5px auto;
+        }        
+        .content {
+            width: 98vw;
+            max-width: 1120px;
+            margin: 0 auto;
+            padding: 3px;
+        }        
+        .containerblock {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 1vh;
+        }        
+        .containerbox {
+            width: 49%;
+            padding: 7px;
+            margin: 7px;
+        }        
+        .containerbox p,
+        ul {
+            font-size: 2.2vw;
+            line-height: 2.2vw;
+            text-align: right;
+        }        
+        .wrapper {
+            padding-top: 3.3vh;
+            padding-bottom: 3.3vh;
+        }        
+        #logo {
+            text-align: left;
+            width: 15vw;
+            height: auto;
+        }        
+        ul {
+            list-style-type: none;
+        }        
+        h1,
+        em {
+            display: block;
+            text-align: center;
+        }        
+        h1 {
+            font-size: 27px;
+        }        
+        h1 span {
+            font-size: 25px;
+        }
+        em {
+            font-size: 24px;}        
+        h2 {
+            display: block;
+            text-align: left;
+            font-size: 23px !important;
+        }        
+        h3 {
+            display: block;
+            text-align: center;
+            font-size: 23px !important;
+        }        
+        p.post,
+        details {
+            display: block;
+            text-align: left;
+            padding: 7px 3px;
+            text-align: justify;
+            font-size: 20px !important;
+            line-height: 28px !important;
+        }
+.photo-container-1 {
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.photo-container-1 img {
+    width: 100%;
+}
+.photo-container-1 .photo-0 {
+    position: relative;
+    z-index: -2;
+}
+.photo-container-1 .photo-1 {
+    position: absolute;
+    top:-100%;
+    animation: fromtop 10s linear 5s infinite;
+}
+.photo-container-1 .photo-2 {
+    position: absolute;
+    top:-100%;
+    animation: fromtop 10s linear infinite;
+}
+@keyframes fromtop {
+    0% {
+        top: -100%;
+    }
+    4% {
+        top: 0;
+    }
+    5% {
+        top: -20px;
+    }
+    6% {
+        top: 0;
+    } 
+    49.99999% {
+        top: 0;
+        z-index: 1;
+    }   
+    50% {
+        top: 0;
+        z-index: -1;
+    }  
+    100% {
+        top: 0;
+        z-index: -1;      
+    }  
+}
+.divTable{
+	display: table;
+	width: 99.9%;
+  margin: 7px auto;
+  font-size: 16px;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	border: 1px solid #999999;
+	display: table-cell;
+	padding: 3px 10px;
+}
+.divTableHeading {
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
+.swiper {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0 20px;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%; 
+    height: auto;    
+    object-fit: fill;
+    box-sizing: border-box; 
+}        
+    </style>
+
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru-RU" type="text/javascript"></script>
+    
+</head>
+
+<body>
+
+    <header>
+        <div class="content">
+            <div class="containerblock">
+
+                <div class="containerbox">
+                    <img id="logo" src="logo.png" alt="Myryad Logo" />
+                </div>
+
+                <div class="containerbox">
+                    <nav>
+                        <p>меню</p>
+                    </nav>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="content">
+            <div class="wrapper">
+                <h1>Myryad<br />
+                <span>начинается с потрясающего</span>
+                </h1>
+                <em>настоящий английский звук с 1995 года</em>
+            </div>
+
+            <div class="wrapper">
+
+                <h2>О бренде</h2>
+                <p class="post">Компания Myryad основана в 1995 году двумя братьями - Крисом и Дэйвом Эвансами и их женами Сью и Линн в городе Уотерлувилл, графство Гэмпшир, на южном побережье Англии.
+                </p>
+
+                <details>
+                    <summary>Подробнее</summary>
+                    Крис Эванс – Технический директор – еще в 1976 году основал Arcam (тогда A&R Cambridge), с 1986 года работал Директором по технологиям в компании NAD. Дэвид Эванс – Директор производства так же долгое время был одним из руководителей производства NAD,
+                    специализировался в области цифровых технологий. В декабре 1998 г. к ним присоединяется инженер Крис Шорт. Прежде чем присоединиться к Myryad, Крис руководил основанной им компанией Mordaunt Short, а в последствии был председателем правления Tannoy.
+                    В декабре 2004 года Myriad стала частью семейства Armour Home Electronics.<br />
+                    Первенец компании — интегральный усилитель  MI 120 сразу добился всеобщего признания и успеха. В своем первом обзоре в известном издании What Hi-Fi?, усилитель MI120 получил 5 звезд с заголовком «MYRYAD начинается с потрясающего!». В дальнейшем, 
+                    техника под этим брендом становилась неоднократным призером тестов самых влиятельных мировых изданий, а многие известные звукозаписывающие компании применяют усилители компании Myryad в своих референсных системах.<br />
+                    На протяжении многих лет, техника Myryad Systems сохранила фирменный почерк: прекрасное звучание, простота управления, удивительная надежность и великолепный дизайн ― вот почему эта продукция пользуется спросом во всем мире.
+                </details>
+
+            </div>
+
+
+            <div class="wrapper">
+                <h2>Наши продукты</h2>
+                <p><span style="display: block; text-align: center; font-style: italic; font-weight: 400; font-size: 21px !important;">
+                Классический лаконичный дизайн: ничего лишнего - только звук</span></p>
+                
+<div class="photo-container-1">
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="131.png"/>
+          </div>
+          <div class="swiper-slide">
+            <img src="141.png"/>
+          </div>
+        </div>
+      </div>
+</div>                
+
+                <div class="containerblock">
+
+                    <div class="containerbox">
+                        <h3>Z310</h3>
+                        <p class="post" style="padding-right: 15px;">
+                            <i>CD плеер с медиапроигрывателем и функцией ЦАП</i>
+                            <br /> USB audio, Bluetooth 5.0
+                            <br /> Цифровые входы, балансные и небалансные выходы
+                        </p>
+                        <details>
+                            <summary>Подробное описание</summary>
+                            <span style="display: inline-block; text-align: justify;">
+При производстве данной модели использовались аудиофильские 
+комплектующие: ЦАП — ESS ES9219C, конденсаторы NICHICON. Плеер имеет аналоговые XLR и классические RCA выходы, 
+обеспечен цифровыми выходами – оптическим и коаксиальным, а для воспроизведения контента через 
+USB – можно использовать встроенный ЦАП с характеристиками 32бит/768кГц и DSD512. Функция USB-DAC через USB type B 
+или USB type A – для подключения флеш–накопителя. Плеер оборудован большим цветным сенсорным экраном для удобства 
+управления и выходом для наушников на передней панеле.
+</span>
+                        </details>
+                        <details>
+                        <summary>Технические характеристики</summary>
+
+<div class="divTable">
+<div class="divTableBody">
+<div class="divTableRow">
+<div class="divTableCell">Поддерживаемые форматы дисков</div>
+<div class="divTableCell">CD, CD-R, CD-RW</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">Коэффициент гармонических искажений</div>
+<div class="divTableCell">0.001 % (1кГЦ)</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">Отношение сигнал/шум</div>
+<div class="divTableCell">116 дБА</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">Разделение каналов</div>
+<div class="divTableCell">115 дБ</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">Выходной уровень при 0 дБ</div>
+<div class="divTableCell">2.3 В (RMS)</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">Габариты (ШxВxГ)</div>
+<div class="divTableCell">436×95×348 мм</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">Вес (нетто)</div>
+<div class="divTableCell">6.8 кг</div>
+</div>
+</div>
+</div>                        
+                        
+                        </details>
+                    </div>
+
+                    <div class="containerbox">
+                        <h3>Z350</h3>
+                        <p class="post" style="padding-left: 15px;">
+                            <i>Интегральный усилитель с медиапроигрывателем и функцией ЦАП</i>
+                            <br /> Усилитель Dual Mono, USB audio, Bluetooth 5.0
+                            <br />
+                        </p>
+                        <details>
+                            <summary>Подробное описание</summary>
+                            <span style="display: inline-block; text-align: justify;">
+Фирменная схемотехника и отборные компоненты обеспечивают исключительно точное и деликатное звучание. 
+Два трансформатора для реализации бескомпромиссного принципа усиления "двойное моно" с легкостью выдают 200 Вт на 
+нагрузку 4 Ома. Такой запас мощности позволяет уверенно работать даже с "тяжелой" многополосной акустикой со сложным 
+характером импеданса и низкой чувствительностью. При производстве используются аудиофильские комплектующие: ЦАП — 
+ESS ES9219C, удобный Bluetooth 5.0 для передачи HiRes Audio без потерь, конденсаторы Vishay, Nichicon и плёночные 
+WIMA.
+</span>
+                        </details>
+                        <details>
+                        <summary>Технические характеристики</summary>
+<div class="divTable">
+<div class="divTableBody">
+<div class="divTableRow">
+<div class="divTableCell">Выходная мощность, 4 Ом</div>
+<div class="divTableCell">200 Вт</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">Выходная мощность, 4 Ом</div>
+<div class="divTableCell">130 Вт</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">Коэффициент гармонических искажений</div>
+<div class="divTableCell">0.01%</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">Отношение сигнал/шум</div>
+<div class="divTableCell">>97 дБА</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">Входное сопротивление</div>
+<div class="divTableCell">47 кОм</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">Габариты (ШxВxГ)</div>
+<div class="divTableCell">436×115×377 мм</div>
+</div>
+<div class="divTableRow">
+<div class="divTableCell">Вес (нетто)</div>
+<div class="divTableCell">12.3 кг</div>
+</div>
+</div>
+</div>                        
+                        </details>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="wrapper">
+                <h2>Тесты, обзоры</h2>
+
+                <div class="containerblock">
+
+                    <div class="containerbox">
+                        <iframe frameborder="0" scrolling="auto" allowfullscreen width="496" height="280" allow="autoplay; fullscreen; accelerometer; gyroscope; picture-in-picture; encrypted-media" src="https://dzen.ru/embed/vHAy_eekI6R0?from_block=partner&from=zen&mute=0&autoplay=0&tv=0"></iframe>
+                    </div>
+
+                    <div class="containerbox">
+                        <iframe frameborder="0" scrolling="auto" allowfullscreen width="496" height="280" allow="autoplay; fullscreen; accelerometer; gyroscope; picture-in-picture; encrypted-media" src="https://dzen.ru/embed/vtJZFzdC6VWM?from_block=partner&from=zen&mute=0&autoplay=0&tv=0"></iframe>
+                    </div>
+
+                </div>
+
+                <div class="containerblock">
+
+                    <div class="containerbox">
+                        <iframe frameborder="0" scrolling="auto" allowfullscreen width="496" height="280" allow="autoplay; fullscreen; accelerometer; gyroscope; picture-in-picture; encrypted-media" src="https://dzen.ru/embed/vPBmyuUYGdlE?from_block=partner&from=zen&mute=0&autoplay=0&tv=0"></iframe>
+                    </div>
+
+                    <div class="containerbox">
+                        <iframe frameborder="0" scrolling="auto" allowfullscreen width="496" height="280" allow="autoplay; fullscreen; accelerometer; gyroscope; picture-in-picture; encrypted-media" src="https://dzen.ru/embed/vlIPTG7ptCTI?from_block=partner&from=zen&mute=0&autoplay=0&tv=0"></iframe>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="wrapper">
+                <h2>Где купить</h2>
+                <details>
+                    <summary>Найти на карте</summary>
+                    <div id="map" style="width: 90%; height: 75vh; padding: 0; margin: 0 auto;min-height: 480px"></div>
+                </details>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="content">
+            <div class="wrapper">
+                <h2>Наши контакты</h2>
+
+                <div class="containerblock">
+
+                    <div class="containerbox">
+                        <p style="text-align: left; padding-left: 10%; font-size: 16px; line-height: 20px;">
+                            Официальный дистрибьютер
+                            <br /> ООО "ТК Технологика"
+                            <br />
+                            <a href="mailto:info@tl-sound.ru">info@tl-sound.ru</a>
+                            <br />
+                            <a href="//tl-sound.ru">tl-sound.ru</a></p>
+                    </div>
+
+                    <div class="containerbox">
+                        <p style="text-align: left; padding-right: 10%;  font-size: 16px; line-height: 20px;">
+                            Myryad Systems Ltd
+                            <br /> Dunmow Road
+                            <br /> Bishops Stortford
+                            <br /> CM23 5GZ, UK</p>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "fade",
+          autoplay: {
+            delay: 2000,
+          },
+          loop: true,
+        });
+      </script>
+    <script>
+        ymaps.ready(init);
+
+        function init() {
+            var myMap = new ymaps.Map('map', {
+                    center: [55.76, 37.64],
+                    zoom: 10,
+                    controls: ['fullscreenControl']
+                }),
+                objectManager = new ymaps.ObjectManager();
+
+            objectManager.objects.options.set({
+                preset: 'islands#redDotIcon',
+            }, );
+            myMap.geoObjects.add(objectManager);
+            //myMap.behaviors.disable('scrollZoom'); // расскоментировать для отключения маштабирования при скроле
+            myMap.controls.add('zoomControl', {
+                float: 'none',
+                position: {
+                    right: 10,
+                    bottom: 45
+                }
+            });
+            var points = {
+                "type": "FeatureCollection",
+                "features": [{
+                    "type": "Feature",
+                    "id": 0,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.673818, 37.565183]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Salon HiFi</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Новочеремушкинская ул., дом 44 корпус 3</p><h4>Контактный телефон</h4><p><a href=\"tel:+74957716495\" class=\"maps__hints--phone\">+7 (495) 771-64-95</a></p><h4>Сайт</h4><p><a href=\"https://www.salonhifi.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://www.salonhifi.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Salon HiFi</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 1,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.799865, 37.274366]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">High End Avenue</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>5-й км Новорижского шоссе в область ТРК «РИГА МОЛЛ», 1й этаж Центральный вход, направо</p><h4>Контактные телефоны</h4><p><a href=\"tel:+79163347107\" class=\"maps__hints--phone\">+7 (916) 334-71-07</a>, <a href=\"tel:+78005001158\" class=\"maps__hints--phone\">+7 (800) 500-11-58</a></p><h4>Сайт</h4><p><a href=\"https://hiend.store/\" class=\"maps__hints--site\" target=\"_blank\">https://hiend.store/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">High End Avenue</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 2,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.741785, 37.503175]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Cinemascop</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Москва, Багратионовский пр., 7, корп. 3павильон G2-197A, этаж 2</p><h4>Контактный телефон</h4><p></p><h4>Сайт</h4><p><a href=\"http://cinemascop.ru/\" class=\"maps__hints--site\" target=\"_blank\">http://cinemascop.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Cinemascop</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 3,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [59.927576, 30.358287]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Stereozona</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Санкт-Петербург, Лиговский проспект, 63</p><h4>Контактный телефон</h4><p><a href=\"tel:+78124246201\" class=\"maps__hints--phone\">+7 (812) 424 62 01</a></p><h4>Сайт</h4><p><a href=\"https://stereozona.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://stereozona.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Stereozona</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 4,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.790863, 37.680175]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Зенит-HiFi</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Москва, Сокольническая площадь, д9 корп. 1 </p><h4>Контактный телефон</h4><p><a href=\"tel:+74992680396\" class=\"maps__hints--phone\">+7 (499) 268-03-96</a></p><h4>Сайт</h4><p><a href=\"http://www.zenit-hi-fi.ru/\" class=\"maps__hints--site\" target=\"_blank\">http://www.zenit-hi-fi.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Зенит-HiFi</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 5,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [52.291263, 104.297327]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Генеральный дилер  <br />«Студия Fonograf»</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Иркутск, ул. Карла Маркса д.40 ТВЦ Галерея REVOЛЮЦИЯ, 2 уровень <br />Режим работы <br />Пн – Сб: 10:00 - 19:00</p><h4>Контактные телефоны</h4><p><a href=\"tel:+73952798844\" class=\"maps__hints--phone\">+7 (3952) 79-88-44</a>, <a href=\"tel:<br/>+73952989080\" class=\"maps__hints--phone\"><br />+7 (3952) 98-90-80</a>, <a href=\"tel:<br/>Email:info@fonografstudio.ru\" class=\"maps__hints--phone\"><br />E-mail: info@fonograf-studio.ru</a></p><h4>Сайт</h4><p><a href=\"https://fonograf-studio.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://fonograf-studio.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Генеральный дилер  <br />«Студия Fonograf»</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 6,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.733149, 37.614865]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Нота+</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Казанский переулок, д.2-4</p><h4>Контактный телефон</h4><p><a href=\"tel:+74991059922\" class=\"maps__hints--phone\">+7 499 105 99 22</a></p><h4>Сайт</h4><p><a href=\"https://nota.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://nota.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Нота+</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 7,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.748356, 37.660515]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">SoundProLab</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Николоямский пер., 4/6</p><h4>Контактные телефоны</h4><p><a href=\"tel:88007707553\" class=\"maps__hints--phone\">8 800 770-7553</a>, <a href=\"tel:<br/>+74957838553\" class=\"maps__hints--phone\"><br />+7 495 783-8553</a></p><h4>Сайты</h4><p><a href=\"https://spl.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://spl.ru/</a>, <a href=\"https://vinylsound.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://vinylsound.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">SoundProLab</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 8,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.754572, 37.621182]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">SoundProLab</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Красная площадь, 3, ТД ГУМ, 3-й этаж, 3-я линия</p><h4>Контактный телефон</h4><p><a href=\"tel:+74957838553\" class=\"maps__hints--phone\">+7 495 783-8553</a></p><h4>Сайты</h4><p><a href=\"https://spl.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://spl.ru/</a>, <a href=\"https://vinylsound.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://vinylsound.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">SoundProLab</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 9,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.708035, 37.594524]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">PULT.RU</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Москва, улица Орджоникидзе, д. 11, стр. 1А</p><h4>Контактный телефон</h4><p><a href=\"tel:+74951377024\" class=\"maps__hints--phone\">+7 495 137-70-24</a></p><h4>Сайт</h4><p><a href=\"https://www.pult.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://www.pult.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">PULT.RU</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 10,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.780588, 37.590677]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">PULT.RU</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Москва, улица Лесная, д. 43</p><h4>Контактный телефон</h4><p><a href=\"tel:+74951377024\" class=\"maps__hints--phone\">+7 495 137-70-24</a></p><h4>Сайт</h4><p><a href=\"https://www.pult.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://www.pult.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">PULT.RU</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 11,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.753195, 37.584155]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">PULT.RU</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Москва, Новинский бульвар д.12</p><h4>Контактный телефон</h4><p><a href=\"tel:+74951377024\" class=\"maps__hints--phone\">+7 495 137-70-24</a></p><h4>Сайт</h4><p><a href=\"https://www.pult.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://www.pult.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">PULT.RU</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 12,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.749303, 37.701968]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">AVSound</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Москва, ул. Золоторожский вал, д. 11, стр. 26, 7 этаж, БЦ «Рогожская застава»</p><h4>Контактный телефон</h4><p><a href=\"tel:+74957488903\" class=\"maps__hints--phone\">+7 495 748-89-03</a></p><h4>Сайт</h4><p><a href=\"https://avsound.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://avsound.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">AVSound</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 13,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [57.591510, 39.867344]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Cалон YarHiFi</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Ярославль, ул. Гоголя , д. 2 Торгово-развлекательный комплекс «Фараон» 2 этаж</p><h4>Контактный телефон</h4><p><a href=\"tel:+74852455050,+74852336260\" class=\"maps__hints--phone\">+7 (4852) 45-50-50, +7 (4852) 33-62-60</a></p><h4>Сайт</h4><p><a href=\"https://yarhifi.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://yarhifi.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Cалон YarHiFi</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 14,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.742184, 37.504232]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Hi-Fi салон Cinemascop</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Москва, Багратионовский проезд, 7к3, ТЦ Горбушкин Двор, 2 этаж, пав. G2-197A</p><h4>Контактный телефон</h4><p><a href=\"tel:+79167814521\" class=\"maps__hints--phone\">+7 (916) 781-45-21</a></p><h4>Сайт</h4><p><a href=\"https://cinemascop.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://cinemascop.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Hi-Fi салон Cinemascop</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 15,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.743588, 37.625190]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Галерея «Назаров»</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Москва, Большая Ордынка, 13/9</p><h4>Контактный телефон</h4><p><a href=\"tel:+74951343286\" class=\"maps__hints--phone\">+7 (495) 134-32-86</a></p><h4>Сайт</h4><p><a href=\"https://nazarov-gallery.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://nazarov-gallery.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Галерея «Назаров»</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 16,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.747900, 37.700208]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">InSound</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Москва, шоссе Энтузиастов, дом 6, офис 102 </p><h4>Контактный телефон</h4><p><a href=\"tel:+74959789646,+74959181215\" class=\"maps__hints--phone\">+7 (495) 978-96-46, +7 (495) 918-12-15</a></p><h4>Сайт</h4><p><a href=\"https://in-sound.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://in-sound.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">InSound</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 17,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.752247, 37.671193]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">AbbGroup.ru</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Москва, Нижняя Сыромятническая, 10, к. 2 </p><h4>Контактный телефон</h4><p><a href=\"tel:+74957900525\" class=\"maps__hints--phone\">+7 (495) 790-05-25</a></p><h4>Сайт</h4><p><a href=\"https://abbgroup.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://abbgroup.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">AbbGroup.ru</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 18,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [59.944364, 30.349079]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">ADK.audio</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Санкт-Петербург, Литейный проспект 18</p><h4>Контактный телефон</h4><p><a href=\"tel:+78126605414\" class=\"maps__hints--phone\">+7 (812) 660-54-14</a></p><h4>Сайт</h4><p><a href=\"https://adk.audio/\" class=\"maps__hints--site\" target=\"_blank\">https://adk.audio/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">ADK.audio</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 19,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [59.940627, 30.348827]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Салон HiFi Audio</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Санкт-Петербург, Литейный пр., 30</p><h4>Контактный телефон</h4><p><a href=\"tel:+78126029682\" class=\"maps__hints--phone\">+7 (812) 602-96-82 </a></p><h4>Сайт</h4><p><a href=\"https://www.hifiaudio-spb.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://www.hifiaudio-spb.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Салон HiFi Audio</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 20,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [59.945562, 30.348360]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Санкт-Петербург, Литейный проспект, д. 9</p><h4>Контактный телефон</h4><p><a href=\"tel:+74957555560,+78123892738\" class=\"maps__hints--phone\">+7 (495) 755-55-60, +7 (812) 389-27-38</a></p><h4>Сайт</h4><p><a href=\"https://st-petersburg.pult.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://st-petersburg.pult.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 21,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [51.701295, 39.181539]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Воронеж, Московский проспект 67</p><h4>Контактный телефон</h4><p><a href=\"tel:+74957555560,+74732059499\" class=\"maps__hints--phone\">+7 (495) 755-55-60, +7 (4732) 05-94-99 </a></p><h4>Сайт</h4><p><a href=\"https://voronej.pult.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://voronej.pult.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 22,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [53.205134, 50.121070]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Пульт.ру </h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Самара, Галактионовская улица, 277</p><h4>Контактный телефон</h4><p><a href=\"tel:+74957555560,+78462295341\" class=\"maps__hints--phone\">+7 (495) 755-55-60, +7 (846) 229-53-41</a></p><h4>Сайт</h4><p><a href=\"https://samara.pult.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://samara.pult.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Пульт.ру </h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 23,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [56.302118, 38.135828]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Hi-Fi салон Cinemascop</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Сергиев Посад, ул. Кооперативная, д.2, ТЦ Мамонтов, 3 этаж</p><h4>Контактный телефон</h4><p><a href=\"tel:+79067307270\" class=\"maps__hints--phone\">+7 (906) 730-72-70</a></p><h4>Сайт</h4><p><a href=\"https://cinemascop.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://cinemascop.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Hi-Fi салон Cinemascop</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 24,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.792625, 49.163044]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Казань, ул. Николая Ершова, 28</p><h4>Контактный телефон</h4><p><a href=\"tel:+74957555560,+78432024288\" class=\"maps__hints--phone\">+7 (495) 755-55-60, +7 (843) 202-42-88</a></p><h4>Сайт</h4><p><a href=\"https://kazan.pult.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://kazan.pult.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 25,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [54.715551, 20.503220]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">УЛЬТРА</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Калининград, Ленинский пр. 8</p><h4>Контактный телефон</h4><p><a href=\"tel:+74012772233\" class=\"maps__hints--phone\">+7 (4012) 77-22-33</a></p><h4>Сайт</h4><p><a href=\"https://ultra-ultra.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://ultra-ultra.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">УЛЬТРА</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 26,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [57.762532, 40.945058]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Салон-магазин «Джем»</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Кострома, ул. Советская, д42/1</p><h4>Контактный телефон</h4><p><a href=\"tel:+79038992454\" class=\"maps__hints--phone\">+7 (903) 899-24-54</a></p><h4>Сайт</h4><p></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Салон-магазин «Джем»</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 27,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [45.027241, 38.967812]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Салон Репортер</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Краснодар, ул. Гоголя, 52</p><h4>Контактный телефон</h4><p><a href=\"tel:+78612559309\" class=\"maps__hints--phone\">+7 (861) 255-93-09</a></p><h4>Сайт</h4><p><a href=\"https://hifi-reporter.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://hifi-reporter.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Салон Репортер</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 28,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [45.038776, 38.983416]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p> Краснодар, ул. Северная, д. 392</p><h4>Контактный телефон</h4><p><a href=\"tel:+74957555560,+78612055364\" class=\"maps__hints--phone\">+7 (495) 755-55-60, +7 (861) 205-53-64</a></p><h4>Сайт</h4><p><a href=\"https://krasnodar.pult.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://krasnodar.pult.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 29,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [56.045368, 92.914277]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Пульт.ру </h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Красноярск, ул. Молокова д.1 к.1</p><h4>Контактный телефон</h4><p><a href=\"tel:+74957555560,+73919863488\" class=\"maps__hints--phone\">+7 (495) 755-55-60, +7 (391) 986-34-88</a></p><h4>Сайт</h4><p><a href=\"https://krasnoyarsk.pult.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://krasnoyarsk.pult.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Пульт.ру </h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 30,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [56.815454, 60.569366]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Салон Studio HiFi</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Екатеринбург, ул. Шаумяна 86/1</p><h4>Контактный телефон</h4><p><a href=\"tel:+73432342533,+73432022533\" class=\"maps__hints--phone\">+7 (343) 234-25-33, +7 (343) 202-25-33</a></p><h4>Сайт</h4><p><a href=\"https://studiohifi.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://studiohifi.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Салон Studio HiFi</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 31,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [56.832817, 60.619851]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Екатеринбург, ул. Мамина-Сибиряка д. 126</p><h4>Контактный телефон</h4><p><a href=\"tel:+74957555560,+73433394815\" class=\"maps__hints--phone\">+7 (495) 755-55-60, +7 (343) 339-48-15</a></p><h4>Сайт</h4><p><a href=\"https://ekaterinburg.pult.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://ekaterinburg.pult.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 32,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.015428, 82.933249]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Салон Utopia Sound</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Новосибирск, ул. Шевченко 11</p><h4>Контактный телефон</h4><p><a href=\"tel:+73833751197\" class=\"maps__hints--phone\">+7 (383) 375-11-97</a></p><h4>Сайт</h4><p><a href=\"https://big54.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://big54.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Салон Utopia Sound</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 33,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.032722, 82.911617]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Новосибирск, Вокзальная магистраль, дом 13</p><h4>Контактный телефон</h4><p><a href=\"tel:+74957555560,+73832078665\" class=\"maps__hints--phone\">+7 (495) 755-55-60, +7 (383) 207-86-65</a></p><h4>Сайт</h4><p><a href=\"https://novosibirsk.pult.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://novosibirsk.pult.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 34,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [56.320033, 44.009113]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Hi-Fi аудио</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Нижний Новгород, ул. Ошарская, д. 15</p><h4>Контактный телефон</h4><p><a href=\"tel:+78314331724\" class=\"maps__hints--phone\">+7 (831) 433-17-24</a></p><h4>Сайт</h4><p><a href=\"http://www.audio-hifi.ru\" class=\"maps__hints--site\" target=\"_blank\">http://www.audio-hifi.ru</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Hi-Fi аудио</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 35,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [56.311376, 43.985442]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Zаратустра SW</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Нижний Новгород, ул. Арзамасская, д3</p><h4>Контактный телефон</h4><p><a href=\"tel:+79519022999\" class=\"maps__hints--phone\">+7 (951) 902-29-99</a></p><h4>Сайт</h4><p><a href=\"https://zaratustra-nn.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://zaratustra-nn.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Zаратустра SW</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 36,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [56.311321, 43.998503]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Нижний Новгород, ул. Новая, дом 3</p><h4>Контактный телефон</h4><p><a href=\"tel:+74957555560,+78312199635\" class=\"maps__hints--phone\">+7 (495) 755-55-60, +7 (831) 219-96-35</a></p><h4>Сайт</h4><p><a href=\"https://nizhniy-novgorod.pult.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://nizhniy-novgorod.pult.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 37,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [58.014040, 56.236774]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">ADK.audio</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Пермь, Комсомольский проспект 14</p><h4>Контактный телефон</h4><p><a href=\"tel:+73422111553\" class=\"maps__hints--phone\">+7 (342) 211-15-53</a></p><h4>Сайт</h4><p><a href=\"https://adk.audio/\" class=\"maps__hints--site\" target=\"_blank\">https://adk.audio/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">ADK.audio</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 38,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [57.992656, 56.251973]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Пермь, Комсомольский проспект, 75</p><h4>Контактный телефон</h4><p><a href=\"tel:+74957555560,+73422563676\" class=\"maps__hints--phone\">+7 (495) 755-55-60, +7 (342) 256-36-76</a></p><h4>Сайт</h4><p><a href=\"https://perm.pult.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://perm.pult.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 39,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [47.226998, 39.741639]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">ADK.audio</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Ростов-на-Дону, Большая садовая 186</p><h4>Контактный телефон</h4><p><a href=\"tel:+78633335104,+78005055547\" class=\"maps__hints--phone\">+7 (863) 333-51-04, +7 (800) 505-55-47</a></p><h4>Сайт</h4><p><a href=\"https://adk.audio/\" class=\"maps__hints--site\" target=\"_blank\">https://adk.audio/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">ADK.audio</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 40,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [47.249598, 39.755356]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Ростов-на-Дону, Проспект Ленина, д. 236</p><h4>Контактный телефон</h4><p><a href=\"tel:+74957555560,+78632098336\" class=\"maps__hints--phone\">+7 (495) 755-55-60, +7 (863) 209-83-36</a></p><h4>Сайт</h4><p><a href=\"https://rostov.pult.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://rostov.pult.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 41,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [54.190156, 37.584586]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Салон-магазин «Хороший звук»</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Тула, ул. Демонстрации, д.27</p><h4>Контактный телефон</h4><p><a href=\"tel:+74872526028\" class=\"maps__hints--phone\">+7 (4872) 52-60-28</a></p><h4>Сайт</h4><p><a href=\"https://www.good-sound.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://www.good-sound.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Салон-магазин «Хороший звук»</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 42,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [54.308414, 48.388013]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Генеральный дилер <br />«Гармония Звука»</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>г. Ульяновск, ул. Железной Дивизии 5б, «ТЦ Спартак», 2ой этаж, 14 бутик <br />Режим работы: <br />Пн-Сб: 10:00–20:00 </p><h4>Контактные телефоны</h4><p><a href=\"tel:+79677711808Отделобслуживанияиподдержки\" class=\"maps__hints--phone\">+7 (967) 771-18-08 (Отдел обслуживания и поддержки)</a>, <a href=\"tel:<br/>+79033376891Консультации\" class=\"maps__hints--phone\"><br />+7 (903) 337- 68-91  (Консультации)</a>, <a href=\"tel:<br/>+79278312381Записьнапрослушивание\" class=\"maps__hints--phone\"><br />+7(927)831-23-81 (Запись на прослушивание)</a>, <a href=\"tel:<br/>Email:msv73@list.ru\" class=\"maps__hints--phone\"><br />E-mail: msv73@list.ru</a></p><h4>Сайты</h4><p><a href=\"https://ul-harmonysound.com \" class=\"maps__hints--site\" target=\"_blank\">https://ul-harmonysound.com </a>, <a href=\"<br />https://vk.com/ulhs73\" class=\"maps__hints--site\" target=\"_blank\"><br />https://vk.com/ulhs73</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Генеральный дилер <br />«Гармония Звука»</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 43,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [48.490560, 135.067273]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Салон «Академия звука»</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Хабаровск, ул. Герасимова, д. 4</p><h4>Контактный телефон</h4><p><a href=\"tel:+74212736832\" class=\"maps__hints--phone\">+7 (4212) 73-68-32</a></p><h4>Сайт</h4><p><a href=\"https://kioth.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://kioth.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Салон «Академия звука»</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 44,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.147881, 61.399625]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Салон «Мир звука»</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Челябинск, ул. Елькина 85 (первый этаж, левое крыло)</p><h4>Контактный телефон</h4><p><a href=\"tel:+73512642222\" class=\"maps__hints--phone\">+7 (351) 264-22-22</a></p><h4>Сайт</h4><p><a href=\"http://www.mir-zvuka.ru/\" class=\"maps__hints--site\" target=\"_blank\">http://www.mir-zvuka.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Салон «Мир звука»</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 45,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.157140, 61.369558]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Челябинск, ул. Сони Кривой, дом 83</p><h4>Контактный телефон</h4><p><a href=\"tel:+74957555560,+73512208392\" class=\"maps__hints--phone\">+7 (495) 755-55-60, +7 (351) 220-83-92</a></p><h4>Сайт</h4><p><a href=\"https://chelyabinsk.pult.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://chelyabinsk.pult.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Пульт.ру</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 46,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.739047, 37.640982]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Солярис</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Москва, ул. Садовническая д. 74</p><h4>Контактный телефон</h4><p><a href=\"tel:+74959519944,+79261599944\" class=\"maps__hints--phone\">+7 (495) 951-99-44, +7 (926) 159-99-44</a></p><h4>Сайт</h4><p><a href=\"http://www.solyaris.ru/\" class=\"maps__hints--site\" target=\"_blank\">http://www.solyaris.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Солярис</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 47,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [59.925371, 30.352124]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Диез</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Санкт-Петербург, ул. Марата, 40</p><h4>Контактные телефоны</h4><p><a href=\"tel:88126678581розничныйотдел\" class=\"maps__hints--phone\">8 (812) 667-85-81 - розничный отдел</a>, <a href=\"tel:88125721276инсталляционнотехническийотдел\" class=\"maps__hints--phone\"> 8 (812) 572-12-76 - инсталляционно-технический отдел</a>, <a href=\"tel:88125721275офис\" class=\"maps__hints--phone\">8 (812) 572-12-75 - офис</a></p><h4>Сайт</h4><p></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Диез</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 48,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [44.567364, 33.465793]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Просто Аудио </h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Севастополь, Камышовое шоссе 40</p><h4>Контактный телефон</h4><p><a href=\"tel:+79780218883\" class=\"maps__hints--phone\">+7 (978) 021-88-83</a></p><h4>Сайт</h4><p><a href=\"https://prostoaudio.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://prostoaudio.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Просто Аудио </h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 49,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [45.027241, 38.967812]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Репортёр</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Краснодар ул. Гоголя, 52 </p><h4>Контактный телефон</h4><p><a href=\"tel:+79184524545\" class=\"maps__hints--phone\">+7(918)452-45-45 </a></p><h4>Сайт</h4><p><a href=\"https://hifi-reporter.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://hifi-reporter.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Репортёр</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 50,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [53.179211, 45.014812]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Салон «AVМеломан»</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Пенза, ул. Калинина, д. 22А <br />Пн-Пт:10:00-19:00 <br />Сб:10:00-16:00 <br />Вс: Выходной</p><h4>Контактный телефон</h4><p><a href=\"tel:+78412253677<br/>+78412257422<br/>+79273753677Тимофей<br/>avmeloman58@yandex.ru\" class=\"maps__hints--phone\">+7 (8412) 25-36-77 <br />+7 (8412) 25-74-22 <br />+7 (927) 375-36-77 (Тимофей) <br />avmeloman58@yandex.ru</a></p><h4>Сайт</h4><p><a href=\"http://avmeloman.ru/\" class=\"maps__hints--site\" target=\"_blank\">http://avmeloman.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Салон «AVМеломан»</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 51,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [43.126236, 131.897863]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Генеральный дилер <br />«Диджитал Холл»</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Владивосток, Партизанский пр-т 28 <br />Режим работы:  <br />Пн-Cб: 10:00 -19:00  <br />Вс: 11:00-18:00</p><h4>Контактный телефон</h4><p><a href=\"tel:+74232424025<br/>+79247300412<br/>Email:ph@halltrading.ru\" class=\"maps__hints--phone\">+7 (423) 242 40 25   <br />+7 (924) 730 04 12   <br />E-mail: ph@hall-trading.ru</a></p><h4>Сайт</h4><p><a href=\"www.digital-hall.ru\" class=\"maps__hints--site\" target=\"_blank\">www.digital-hall.ru</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Генеральный дилер <br />«Диджитал Холл»</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 52,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.161795, 61.397757]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Генеральный дилер <br />«Салон Ural-HiFi»</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Челябинск, ул. Коммуны 87, этаж 1 <br />Режим работы:  <br />Пн-Cб: 10:00-19:00  <br />Вс: 11:00-18:00</p><h4>Контактный телефон</h4><p><a href=\"tel:+73512161699<br/>+78007008135<br/>Email:info@uralhifi.ru<br/>Telegram:https://t.me/uralhifi\" class=\"maps__hints--phone\">+7 (351) 216-16-99 <br />+7 (800) 700-81-35  <br />E-mail: info@uralhifi.ru <br />Telegram: https://t.me/uralhifi</a></p><h4>Сайт</h4><p><a href=\"https://ural-hifi.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://ural-hifi.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Генеральный дилер <br />«Салон Ural-HiFi»</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 53,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [53.193925, 50.095351]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Генеральный дилер <br />«HiFi – Самара»</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Самара, ул. Фрунзе, 132/134 <br />Режим работы: <br />Пн-Пт: 11:00-19:00</p><h4>Контактный телефон</h4><p><a href=\"tel:+78462764040<br/>+78462764141<br/>+78463328993<br/>Email:hifi63@yandex.ru\" class=\"maps__hints--phone\">+7 846 276-40-40 <br />+7 846 276-41-41 <br />+7 846 332-89-93  <br />E-mail: hifi63@yandex.ru</a></p><h4>Сайт</h4><p><a href=\"www.hifi-samara.ru\" class=\"maps__hints--site\" target=\"_blank\">www.hifi-samara.ru</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Генеральный дилер <br />«HiFi – Самара»</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 54,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [58.588833, 49.644658]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Генеральный дилер <br />«Premium Sound»</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Киров, Чапаева 11  <br />Режим работы: <br />Пн-Пт: 11:00-19:00 <br />Сб: 11:00 -17:00 <br />Вс - выходной</p><h4>Контактный телефон</h4><p><a href=\"tel:+79226611548<br/>+79195060777<br/>Email:info@pmsound.ru\" class=\"maps__hints--phone\">+7 (922) 6611548 <br />+7 (919) 5060777  <br />E-mail: info@pmsound.ru</a></p><h4>Сайт</h4><p><a href=\"www.pmsound.ru\" class=\"maps__hints--site\" target=\"_blank\">www.pmsound.ru</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Генеральный дилер <br />«Premium Sound»</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 55,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [59.938784, 30.314997]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">MADHIFI</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>Санкт-Петербург</p><h4>Контактный телефон</h4><p><a href=\"tel:88002014767<br/>89502233737<br/>Почта:info@madhifi.ru\" class=\"maps__hints--phone\">8 800 201-47-67 <br />8 950 223-37-37 <br />Почта: info@madhifi.ru</a></p><h4>Сайт</h4><p><a href=\"https://madhifi.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://madhifi.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">MADHIFI</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 56,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [54.782080, 32.050111]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Генеральный дилер  <br />«DroidOne»</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>г. Смоленск, Ленина 8А <br />Режим работы: <br />Пн-ПТ: 10:00 - 21:00  <br />Сб-Вс:  11:00 - 20:00</p><h4>Контактные телефоны</h4><p><a href=\"tel:+78005053107\" class=\"maps__hints--phone\">+7(800)505-31-07 </a>, <a href=\"tel:+74812313107\" class=\"maps__hints--phone\">+7(4812)31-31-07 </a>, <a href=\"tel:+79107873107\" class=\"maps__hints--phone\">+7(910)787-31-07</a>, <a href=\"tel:Email:<br/>ph@halltrading.ru<br/>droidone67@gmail.com\" class=\"maps__hints--phone\">E-mail: <br />ph@hall-trading.ru <br />droidone67@gmail.com </a></p><h4>Сайты</h4><p><a href=\"https://droidone.ru\" class=\"maps__hints--site\" target=\"_blank\">https://droidone.ru</a>, <a href=\"<br />https://vk.com/droidone\" class=\"maps__hints--site\" target=\"_blank\"><br />https://vk.com/droidone</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Генеральный дилер  <br />«DroidOne»</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 57,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [56.034466, 92.907845]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Генеральный дилер <br />Слон «Hi-Fi Винил»</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p><i>Салон музыкального оборудования и виниловых пластинок.</i> <br />г. Красноярск ул. Весны, 1, микрорайон Взлётка, этаж 1, ТЦ «Взлетка -Плаза» <br />Режим работы: <br />Пн-Вс: 10:00-20:00</p><h4>Контактный телефон</h4><p><a href=\"tel:+79233036282\" class=\"maps__hints--phone\">+7 (923) 303-62-82</a></p><h4>Сайты</h4><p><a href=\"https://hifivinyl.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://hifivinyl.ru/</a>, <a href=\"<br />https://vk.com/hifivinyl\" class=\"maps__hints--site\" target=\"_blank\"><br />https://vk.com/hifivinyl</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Генеральный дилер <br />Слон «Hi-Fi Винил»</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 58,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [51.537176, 46.009526]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Генеральный дилер <br />Салон «Академия Домашнего Кинотеатра»</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>г. Саратов, Астраханская, 81 (угол Большая Казачья) <br />Режим работы: <br />Пн-ПТ: 10:00 — 19:00 <br />Сб: 10:00 — 18:00 <br />Вс: 10:00 — 16:00</p><h4>Контактные телефоны</h4><p><a href=\"tel:+78002001164\" class=\"maps__hints--phone\">+7 (800) 200-1164</a>, <a href=\"tel:<br/>+78452522112\" class=\"maps__hints--phone\"><br />+7 (8452) 522-112</a>, <a href=\"tel:<br/>Email:info@homemedia.ru\" class=\"maps__hints--phone\"><br />E-mail:  info@homemedia.ru</a></p><h4>Сайт</h4><p><a href=\"https://homemedia.ru\" class=\"maps__hints--site\" target=\"_blank\">https://homemedia.ru</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Генеральный дилер <br />Салон «Академия Домашнего Кинотеатра»</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 59,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.755819, 37.617644]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">Технопарк</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p></p><h4>Контактные телефоны</h4><p><a href=\"tel:Оформитьзаказ:88001008899\" class=\"maps__hints--phone\">Оформить заказ: 8 (800) 100-88-99</a>, <a href=\"tel:<br/>Службаподдержки:88001005588\" class=\"maps__hints--phone\"><br />Служба поддержки: 8 (800) 100-55-88</a></p><h4>Сайт</h4><p><a href=\"https://www.technopark.ru \" class=\"maps__hints--site\" target=\"_blank\">https://www.technopark.ru </a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">Технопарк</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 60,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.755819, 37.617644]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">ОНЛАЙН ТРЕЙД РУ</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p></p><h4>Контактный телефон</h4><p></p><h4>Сайт</h4><p><a href=\"https://www.onlinetrade.ru\" class=\"maps__hints--site\" target=\"_blank\">https://www.onlinetrade.ru</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">ОНЛАЙН ТРЕЙД РУ</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 61,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.735221, 37.650352]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">МУЗТОРГ</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>г. Москва, Краснохолмская наб., д. 3</p><h4>Контактные телефоны</h4><p><a href=\"tel:84956415971\" class=\"maps__hints--phone\">8 495 641-59-71 </a>, <a href=\"tel:<br/>88005550075\" class=\"maps__hints--phone\"><br / >8 800 555-00-75  </a>, <a href=\"tel:<br/>84956415959\" class=\"maps__hints--phone\"><br / >8 495 641-59-59</a>, <a href=\"tel:<br/>Email:salon@muztorg.ru\" class=\"maps__hints--phone\"><br />E-mail:  salon@muztorg.ru</a></p><h4>Сайт</h4><p><a href=\"https://www.muztorg.ru\" class=\"maps__hints--site\" target=\"_blank\">https://www.muztorg.ru</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">МУЗТОРГ</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 62,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.714992, 37.613871]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">ВИНИЛМАРКТ</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>г. Москва, улица Хавская, дом 11, первый этаж, комната №3.</p><h4>Контактный телефон</h4><p><a href=\"tel:+74951093382\" class=\"maps__hints--phone\">+7 495 109 33 82</a></p><h4>Сайт</h4><p><a href=\"https://vinylmarkt.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://vinylmarkt.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">ВИНИЛМАРКТ</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 63,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.701699, 37.604044]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">AVComfort</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>г. Москва, м. Ленинский проспект, ТТК, 5-й Донской проезд, д. 23</p><h4>Контактные телефоны</h4><p><a href=\"tel:+74952496090\" class=\"maps__hints--phone\">+7 (495) 249-60-90</a>, <a href=\"tel:<br/>+74957726190\" class=\"maps__hints--phone\"><br />+7 (495) 772-61-90</a></p><h4>Сайт</h4><p><a href=\"https://avcomfort.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://avcomfort.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">AVComfort</h2>",
+                    }
+                }, {
+                    "type": "Feature",
+                    "id": 64,
+                    "geometry": {
+                        "type": "Point",
+                        "coordinates": [55.754740, 37.621408]
+                    },
+                    "properties": {
+                        "balloonContentHeader": "<h2 class=\"mb-1\">SoundProLab</h2>",
+                        "balloonContentBody": "<div class=\"maps__hints--body\"><h4>Адрес:</h4><p>г. Москва, Красная площадь, 3, 3-й этаж, 3-я линия.</p><h4>Контактные телефоны</h4><p><a href=\"tel:88007707553\" class=\"maps__hints--phone\">8 800 770-7553</a>, <a href=\"tel:<br/>+74994085426\" class=\"maps__hints--phone\"><br />+7 499 408-5426</a></p><h4>Сайт</h4><p><a href=\"https://spl.ru/\" class=\"maps__hints--site\" target=\"_blank\">https://spl.ru/</a></p></div>",
+                        "hintContent": "<h2 class=\"mb-1\">SoundProLab</h2>",
+                    }
+                }, ]
+            }
+            objectManager.add(points);
+        }
+    </script>
+</body>
+
+</html>
